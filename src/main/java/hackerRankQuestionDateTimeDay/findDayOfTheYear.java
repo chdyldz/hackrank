@@ -3,9 +3,9 @@ package hackerRankQuestionDateTimeDay;
 import java.util.Calendar;
 
 public class findDayOfTheYear {
-    public static String findDay(int month, int day, int year) {
+    public String findDay(int month, int day, int year) {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(year,month,day);
+        calendar.set(year,month,day);//month starts from 0
         switch (calendar.getTime().getDay()){//Monday, 2 = Tuesday, 3 = Wednesday, 4 = Thursday, 5 = Friday, 6 = Saturday
             case 0:return "SUNDAY";
             case 1:return "Monday".toUpperCase();
